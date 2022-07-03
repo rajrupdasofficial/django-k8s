@@ -10,7 +10,7 @@ on:
 
 jobs:
   test_django:
-    uses: https://github.com/RajrupDasid/django-k8s/tree/master/.github/workflows/test-django.yaml@master
+    uses: RajrupDasid/django-k8s/.github/workflows/test-django.yaml@master
   docker_build:
     runs-on: ubuntu-latest
     env:
