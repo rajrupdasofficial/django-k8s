@@ -13,6 +13,7 @@ jobs:
     uses: RajrupDasid/django-k8s/.github/workflows/test-django.yaml@master
   docker_build:
     runs-on: ubuntu-latest
+    needs: [test_django]
     env:
       SECRET_KEY: simple-test-key-for-github-public-actions
     steps:
