@@ -15,7 +15,7 @@ jobs:
       run:
         working-directory: ./web
     env:
-      DJANGO_SECRET_KEY: simple-test-key-for-github-public-actions
+      SECRET_KEY: simple-test-key-for-github-public-actions
     strategy:
       max-parallel: 10
       matrix:
