@@ -1,0 +1,21 @@
+name: AZ Docker container workflows
+
+on:
+  workflow_call:
+  workflow_dispatch:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  test_django:
+    uses:https://github.com/RajrupDasid/django-k8s/tree/master/.github/workflows/test-django.yaml@master
+  docker_build:
+    runs-on: ubuntu-latest
+    env:
+      SECRET_KEY: simple-test-key-for-github-public-actions
+    steps:
+    - uses: actions/checkout@v3
+
+
